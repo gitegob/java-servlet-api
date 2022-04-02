@@ -4,6 +4,7 @@ import com.gitego.javaservlet.user.models.User;
 import lombok.Getter;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 @Getter
@@ -15,11 +16,11 @@ public class Database {
     }
 
     public static User findUser(String email) {
-        System.out.println(users);
         return users.get(email);
     }
 
-    public static Map<String, User> getUsers() {
-        return users;
+    public static List<User> getUsers() {
+        return (List<User>) users.values();
     }
 }
+

@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
             ResponseEntity.send(resp, result, HttpServletResponse.SC_OK);
         } catch (AuthenticationException e) {
             e.printStackTrace();
-            ResponseEntity.send(resp, new ApiResponse<>("Invalid credentials", null), HttpServletResponse.SC_FORBIDDEN);
+            ResponseEntity.send(resp, new ApiResponse<>(e.getMessage(), null), HttpServletResponse.SC_FORBIDDEN);
         }
     }
 }

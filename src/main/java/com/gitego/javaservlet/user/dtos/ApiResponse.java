@@ -6,5 +6,4 @@ import lombok.AllArgsConstructor;
 public class ApiResponse<T> {
     String message;
     T payload;
-
 }
