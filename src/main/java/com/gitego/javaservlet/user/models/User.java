@@ -27,6 +27,7 @@ public abstract class User {
     private String password;
     private Gender gender;
     private Integer age;
+    private Long phone;
     private String country;
     private Role role;
 

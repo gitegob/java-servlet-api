@@ -13,6 +13,9 @@ public class Guest extends User {
         if(Database.findUser(this.getEmail())!=null){
             throw new Exception("User already exists");
         }
+        if(Database.getUsers().stream().filter(user -> user.getPhone().equals(this.getPhone())).findFirst().orElse(null)!=null){
+            throw new Exception("User phone already exists");
+        }
         String regex = "";
         if(this.getRole()== Role.ADMIN) regex = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=\\S+$).{10,}$";
         else regex = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=\\S+$).{5,}$";
