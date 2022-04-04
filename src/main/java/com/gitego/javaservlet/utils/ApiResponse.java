@@ -1,4 +1,4 @@
-package com.gitego.javaservlet.user.dtos;
+package com.gitego.javaservlet.utils;
 
 import lombok.AllArgsConstructor;
 

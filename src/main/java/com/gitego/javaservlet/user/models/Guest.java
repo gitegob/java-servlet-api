@@ -1,12 +1,13 @@
 package com.gitego.javaservlet.user.models;
 
 import com.gitego.javaservlet.db.Database;
-import com.gitego.javaservlet.user.dtos.ApiResponse;
-import com.gitego.javaservlet.user.dtos.Role;
+import com.gitego.javaservlet.utils.ApiResponse;
+import lombok.AllArgsConstructor;
 
 import javax.naming.AuthenticationException;
 import java.util.regex.Pattern;
 
+@AllArgsConstructor
 public class Guest extends User {
     @Override
     public ApiResponse<User> register() throws Exception {
@@ -17,8 +18,8 @@ public class Guest extends User {
             throw new Exception("User phone already exists");
         }
         String regex = "";
-        if(this.getRole()== Role.ADMIN) regex = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=\\S+$).{10,}$";
-        else regex = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=\\S+$).{5,}$";
+//        if(this.getRole()== Role.ADMIN) regex = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=\\S+$).{10,}$";
+        regex = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=\\S+$).{5,}$";
         if (!Pattern.matches(regex, this.getPassword())) {
             throw new Exception("Password rules not met");
         }

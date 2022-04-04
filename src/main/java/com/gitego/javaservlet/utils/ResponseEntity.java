@@ -1,7 +1,5 @@
 package com.gitego.javaservlet.utils;
 
-import com.gitego.javaservlet.user.dtos.ApiResponse;
-
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;

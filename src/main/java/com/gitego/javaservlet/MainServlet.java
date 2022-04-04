@@ -1,6 +1,6 @@
 package com.gitego.javaservlet;
 
-import com.gitego.javaservlet.user.dtos.ApiResponse;
+import com.gitego.javaservlet.utils.ApiResponse;
 import com.gitego.javaservlet.utils.ResponseEntity;
 
 import javax.servlet.ServletException;

@@ -1,7 +1,7 @@
 package com.gitego.javaservlet.user.models;
 
 import com.gitego.javaservlet.db.Database;
-import com.gitego.javaservlet.user.dtos.ApiResponse;
+import com.gitego.javaservlet.utils.ApiResponse;
 
 import javax.naming.AuthenticationException;
 import java.util.regex.Pattern;

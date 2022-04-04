@@ -1,6 +1,6 @@
 package com.gitego.javaservlet.user.models;
 
-import com.gitego.javaservlet.user.dtos.ApiResponse;
+import com.gitego.javaservlet.utils.ApiResponse;
 import com.gitego.javaservlet.user.dtos.Gender;
 import com.gitego.javaservlet.user.dtos.Role;
 import com.google.gson.annotations.Expose;

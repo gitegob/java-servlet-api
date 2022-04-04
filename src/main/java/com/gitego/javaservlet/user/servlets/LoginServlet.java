@@ -1,6 +1,6 @@
 package com.gitego.javaservlet.user.servlets;
 
-import com.gitego.javaservlet.user.dtos.ApiResponse;
+import com.gitego.javaservlet.utils.ApiResponse;
 import com.gitego.javaservlet.user.models.Guest;
 import com.gitego.javaservlet.utils.JsonUtil;
 import com.gitego.javaservlet.utils.ResponseEntity;
