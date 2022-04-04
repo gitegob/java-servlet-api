@@ -3,6 +3,7 @@ package com.gitego.javaservlet.db;
 import com.gitego.javaservlet.user.models.User;
 import lombok.Getter;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ public class Database {
     }
 
     public static List<User> getUsers() {
-        return (List<User>) users.values();
+        return new ArrayList<>(users.values());
     }
 }
 
